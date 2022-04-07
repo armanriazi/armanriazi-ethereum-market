@@ -5,7 +5,7 @@ class Main extends Component {
   render() {
     return (
       <div id="content">
-        <h1>افزودن محصصول</h1>
+        <h1>Add Product</h1>
         <form onSubmit={(event) => {
           event.preventDefault()
           const name = this.productName.value
@@ -18,7 +18,7 @@ class Main extends Component {
               type="text"
               ref={(input) => { this.productName = input }}
               className="form-control"
-              placeholder="نام محصول"
+              placeholder="Product Name"
               required />
           </div>
           <div className="form-group mr-sm-2">
@@ -27,20 +27,20 @@ class Main extends Component {
               type="text"
               ref={(input) => { this.productPrice = input }}
               className="form-control"
-              placeholder="قیمت محصول"
+              placeholder="Product Price"
               required />
           </div>
-          <button type="submit" className="btn btn-primary">افزودن محصول</button>
+          <button type="submit" className="btn btn-primary">Add Product</button>
         </form>
         <p>&nbsp;</p>
-        <h2>خرید محصول</h2>
+        <h2>Buy Product</h2>
         <table className="table">
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">نام</th>
-              <th scope="col">قیمت</th>
-              <th scope="col">مالک</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Owner</th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -61,7 +61,7 @@ class Main extends Component {
                             this.props.purchaseProduct(event.target.name, event.target.value)
                           }}
                         >
-                          خرید
+                          Buy
                         </button>
                       : null
                     }
