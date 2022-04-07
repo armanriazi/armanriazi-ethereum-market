@@ -1,7 +1,7 @@
 {
   "name": "arman-riazi-ethereum-market",
   "version": "0.1.0",
-  "description": "arazhit.ir",
+  "description": "armanriazi.github.io",
   "author": "gregory@dappuniversity.com",
   "dependencies": {
     "babel-polyfill": "6.26.0",
