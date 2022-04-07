@@ -22,7 +22,7 @@ class App extends Component {
       window.web3 = new Web3(window.web3.currentProvider)
     }
     else {
-      window.alert('افزونه اتریوم متامسک روی مرورگر نصب نشده است')
+      window.alert('Please Install MetaMask Extension')
     }
   }
 
@@ -47,7 +47,7 @@ class App extends Component {
       }
       this.setState({ loading: false})
     } else {
-      window.alert('قرارداد هوشمند بروی شبکه استقرار نیافته است')
+      window.alert('Not found any smart contract on kovan network')
     }
   }
 
@@ -88,7 +88,7 @@ class App extends Component {
           <div className="row">
             <main role="main" className="col-lg-12 d-flex">
               { this.state.loading
-                ? <div id="loader" className="text-center"><p className="text-center">در حال بارگذاری...</p></div>
+                ? <div id="loader" className="text-center"><p className="text-center">Loading....</p></div>
                 : <Main
                   products={this.state.products}
                   createProduct={this.createProduct}
